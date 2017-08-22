@@ -44,7 +44,7 @@ a img{
 ---------------------------------------------------*/
 a:focus { outline: none; }
 /*Introduced an outer wrapper for main sections */
-.master { padding: 0; margin:0; width:100% auto; }
+.master { padding: 0; margin:0; width:100%; }
 
 /*Additional Spacing: These are addon classes for manual spacing of elements */
 .module {margin:20px;}

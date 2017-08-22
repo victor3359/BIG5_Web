@@ -1271,6 +1271,11 @@ fieldset h1 {
     text-align: left;
 }
 
+.big5text{
+    font-family:Microsoft JhengHei;
+    font-weight: bolder;
+}
+
 
 
 /* ====================================================*/
@@ -2892,6 +2897,8 @@ fieldset h1 {
     .rb-week span {
         font-size:20px !important;
     }
+
+
 }
 
 
