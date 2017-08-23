@@ -872,19 +872,19 @@ div#portfolio_thumbs ul li div.item_info p > span{
     font-family:"Open_Sans_R";
 }
 .service-thumb{
-    opacity: 0.1;
+    opacity: 0.5;
     margin-top: 20px;
     -moz-transition: all 1.25s ease;
     -webkit-transition: all 1.25s ease;
     -o-transition: all 1.25s ease;
-    transition: all 1.25s ease;
+    transition: all 1s ease;
 }
 .rb-grid li:hover .service-thumb{
-    opacity: 0.5;
+    opacity: 1;
     -moz-transition: all 1.25s ease;
     -webkit-transition: all 1.25s ease;
     -o-transition: all 1.25s ease;
-    transition: all 1.25s ease;
+    transition: all 1s ease;
 }
 
 /*SERVICES*/
