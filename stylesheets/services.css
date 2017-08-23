@@ -13,7 +13,7 @@
 	display: block;
 	float: left;
 	padding: 1.6em;
-	cursor: pointer;
+	cursor: default;
 	position: relative;
 	margin-left: 3px !important;
 }
