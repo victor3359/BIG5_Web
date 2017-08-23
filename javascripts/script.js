@@ -121,7 +121,7 @@ $('.carousel').carousel({
 
 
     $('#about .welcome-text').waypoint(function (event, direction) {
-        if (1) {
+        if (direction === 'down') {
             //Pie-Chart Invokes
       $(function() {
         $('.chart1').easyPieChart({
@@ -162,7 +162,7 @@ $('.carousel').carousel({
         });
 });
         }
-    }, { offset: 1000 });
+    }, { offset: 700 });
 
 
 //Slidebar Menu - State Changes
