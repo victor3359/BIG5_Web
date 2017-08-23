@@ -162,7 +162,7 @@
                     });
                 });
             }
-        }, { offset: 10 });
+        }, { offset: 700 });
 
 
 //Slidebar Menu - State Changes
