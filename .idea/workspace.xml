@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
 <<<<<<< HEAD
+    <list default="true" id="92e5ae85-e259-463a-b98b-cdcc1f02b5fa" name="Default" comment="" />
+=======
+<<<<<<< HEAD
     <list default="true" id="b6cbd5e2-dbe6-48ab-976d-13cd48516604" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/script.js" afterPath="$PROJECT_DIR$/javascripts/script.js" />
@@ -17,6 +20,7 @@
 >>>>>>> fa2672015b0fa15f6fb0003d3d2aeb41a3156506
 >>>>>>> 7ae522c15f6a0642d4e1c4c29899f058af510707
     </list>
+>>>>>>> b4f70804273a117e57e0cdeb03685b1470d21058
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -29,6 +33,9 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+=======
 <<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
@@ -45,12 +52,18 @@
                 <element signature="n#style#0;n#span#0;n#div#0;n#article#0;n#div#2;n#section#0;n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#article#1;n#div#2;n#section#0;n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
 =======
+>>>>>>> b4f70804273a117e57e0cdeb03685b1470d21058
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
 >>>>>>> 7ae522c15f6a0642d4e1c4c29899f058af510707
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="-1456">
+              <caret line="613" column="0" lean-forward="false" selection-start-line="613" selection-start-column="0" selection-end-line="613" selection-end-column="0" />
+=======
             <state relative-caret-position="344">
               <caret line="452" column="18" lean-forward="true" selection-start-line="452" selection-start-column="18" selection-end-line="452" selection-end-column="18" />
+>>>>>>> b4f70804273a117e57e0cdeb03685b1470d21058
               <folding>
                 <element signature="n#style#0;n#div#0;n#article#0;n#div#2;n#section#0;n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#article#0;n#div#2;n#section#0;n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -176,10 +189,15 @@
 =======
     <option name="x" value="-8" />
     <option name="y" value="-8" />
+<<<<<<< HEAD
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
+=======
     <option name="width" value="1378" />
     <option name="height" value="780" />
 >>>>>>> fa2672015b0fa15f6fb0003d3d2aeb41a3156506
 >>>>>>> 7ae522c15f6a0642d4e1c4c29899f058af510707
+>>>>>>> b4f70804273a117e57e0cdeb03685b1470d21058
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -197,6 +215,10 @@
     </navigator>
     <panes>
 <<<<<<< HEAD
+      <pane id="Scope" />
+      <pane id="Scratches" />
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -204,10 +226,18 @@
 >>>>>>> fa2672015b0fa15f6fb0003d3d2aeb41a3156506
       <pane id="Scope" />
 >>>>>>> 7ae522c15f6a0642d4e1c4c29899f058af510707
+>>>>>>> b4f70804273a117e57e0cdeb03685b1470d21058
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="SourceTree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SourceTree" />
+=======
 <<<<<<< HEAD
               <option name="myItemId" value="SourceTree" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
@@ -285,6 +315,7 @@
               <option name="myItemId" value="icons" />
 >>>>>>> fa2672015b0fa15f6fb0003d3d2aeb41a3156506
 >>>>>>> 7ae522c15f6a0642d4e1c4c29899f058af510707
+>>>>>>> b4f70804273a117e57e0cdeb03685b1470d21058
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -338,14 +369,34 @@
       <updated>1503478269953</updated>
       <workItem from="1503478271140" duration="278000" />
 <<<<<<< HEAD
+      <workItem from="1503481119090" duration="45000" />
+=======
+<<<<<<< HEAD
       <workItem from="1503478863936" duration="1284000" />
 =======
 >>>>>>> fa2672015b0fa15f6fb0003d3d2aeb41a3156506
 >>>>>>> 7ae522c15f6a0642d4e1c4c29899f058af510707
+>>>>>>> b4f70804273a117e57e0cdeb03685b1470d21058
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="323000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15080526" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+=======
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="1562000" />
 =======
@@ -386,6 +437,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
 >>>>>>> fa2672015b0fa15f6fb0003d3d2aeb41a3156506
 >>>>>>> 7ae522c15f6a0642d4e1c4c29899f058af510707
+>>>>>>> b4f70804273a117e57e0cdeb03685b1470d21058
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -481,8 +533,39 @@
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#li#0;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#li#0;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#li#1;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#li#1;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#li#2;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#li#2;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#li#3;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#li#3;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#4;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#li#4;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#li#4;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#5;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#li#5;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#li#5;n#ul#0;n#article#0;n#div#2;n#section#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1456">
+          <caret line="613" column="0" lean-forward="false" selection-start-line="613" selection-start-column="0" selection-end-line="613" selection-end-column="0" />
+=======
         <state relative-caret-position="344">
           <caret line="452" column="18" lean-forward="true" selection-start-line="452" selection-start-column="18" selection-end-line="452" selection-end-column="18" />
+>>>>>>> b4f70804273a117e57e0cdeb03685b1470d21058
           <folding>
             <element signature="n#style#0;n#div#0;n#article#0;n#div#2;n#section#0;n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#article#0;n#div#2;n#section#0;n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
