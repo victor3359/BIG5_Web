@@ -930,7 +930,7 @@ div#portfolio_thumbs ul li div.item_info p > span{
 
 .contact-panel {
 }
-
+/*
 input {
     background: transparent !important;
     box-shadow: none !important;
@@ -946,7 +946,7 @@ input {
     height: 50px !important;
     margin-bottom: 30px !important;
 }
-
+*/
 input:focus, textarea:focus {
     color: #000 !important;
     border: solid 2px #000 !important;
