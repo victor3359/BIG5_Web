@@ -1,4 +1,4 @@
-@charset utf-8;
+@charset utf-8
 
 /* CSS Document */
 /*
@@ -944,7 +944,7 @@ input {
     padding: 10px !important;
     width: 100%;
     height: 50px !important;
-    margin-bottom: 30px !important;
+    margin-bottom: 10px !important;
 }
 */
 input:focus, textarea:focus {
@@ -1286,28 +1286,28 @@ fieldset h1 {
 
     /*High resolution BG images on parallax layers*/
     #home {
-        background: url('../images/bg/01%402x.html') center center repeat;
+        background: url('../images/bg/01@2x.html') center center repeat;
         background-size: cover;
     }
 
     #about {
-        background: url('../images/bg/02%402x.html') center center repeat;
+        background: url('../images/bg/02@2x.html') center center repeat;
         background-size: cover;
     }
 
     #team {
-        background: url('../images/bg/03%402x.html') center center repeat;
+        background: url('../images/bg/03@2x.html') center center repeat;
         background-size: cover;
     }
 
     #portfolio {
-        background: url('../images/bg/04%402x.html') center center repeat;
+        background: url('../images/bg/04@2x.html') center center repeat;
         background-size: cover;
         padding-bottom: 149px;
     }
 
     #contact {
-        background: url('../images/bg/05%402x.html') center center repeat;
+        background: url('../images/bg/05@2x.html') center center repeat;
         background-size: cover;
     }
 
