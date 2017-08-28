@@ -59,6 +59,63 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <link href="stylesheets/ie8.css" rel="stylesheet">
     <![endif]-->
+    <style>
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {display:none;}
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
 </head>
 
 <body>
@@ -232,7 +289,7 @@
 
 
     <!-- FEATURED-PROJECT : STARTS -->
-    <section class="featured-project-block page-section next-bg-eleven"  data-stellar-background-ratio="2">
+    <section class="featured-project-block page-section next-bg-five"  data-stellar-background-ratio="2">
         <section class="container">
             <div class="row">
 
@@ -304,444 +361,10 @@
     </section>
     <!-- FEATURED-PROJECT   : ENDS -->
 
-    <!-- CO CO2 graph START-->
-    <script>
-        Highcharts.setOptions({
-            global: {
-                useUTC: false
-            }
-        });
-        function activeLastPointToolip(chart) {
-            var points = chart.series[0].points;
-            chart.tooltip.refresh(points[points.length -1]);
-        }
-        $('#containerCO').highcharts({
-            chart: {
-                type: 'spline',
-                animation: Highcharts.svg, // don't animate in old IE
-                marginRight: 10,
-                events: {
-                    load: function () {
-                        // set up the updating of the chart each second
-                        var series = this.series[0],
-                            chart = this;
-                        setInterval(function () {
-                            var x = (new Date()).getTime(), // current time
-                                y = Math.random();
-                            series.addPoint([x, y], true, true);
-                            activeLastPointToolip(chart)
-                        }, 1000);
-                    }
-                }
-            },
-            title: {
-                text: 'CO'
-            },
-            xAxis: {
-                type: 'datetime',
-                tickPixelInterval: 150
-            },
-            yAxis: {
-                title: {
-                    text: 'ppm'
-                },
-                plotLines: [{
-                    value: 0,
-                    width: 1,
-                    color: '#808080'
-                }]
-            },
-            tooltip: {
-                formatter: function () {
-                    return '<b>' + this.series.name + '</b><br/>' +
-                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
-                        Highcharts.numberFormat(this.y, 2);
-                }
-            },
-            legend: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            series: [{
-                name: 'CO',
-                data: (function () {
-                    // generate an array of random data
-                    var data = [],
-                        time = (new Date()).getTime(),
-                        i;
-                    for (i = -19; i <= 0; i += 1) {
-                        data.push({
-                            x: time + i * 1000,
-                            y: Math.random()
-                        });
-                    }
-                    return data;
-                }())
-            }]
-        }, function(c) {
-            activeLastPointToolip(c)
-        });
 
-    </script>
-    <script>
-        Highcharts.setOptions({
-            global: {
-                useUTC: false
-            }
-        });
-        function activeLastPointToolip(chart) {
-            var points = chart.series[0].points;
-            chart.tooltip.refresh(points[points.length -1]);
-        }
-        $('#containerCO2').highcharts({
-            chart: {
-                type: 'spline',
-                animation: Highcharts.svg, // don't animate in old IE
-                marginRight: 10,
-                events: {
-                    load: function () {
-                        // set up the updating of the chart each second
-                        var series = this.series[0],
-                            chart = this;
-                        setInterval(function () {
-                            var x = (new Date()).getTime(), // current time
-                                y = Math.random();
-                            series.addPoint([x, y], true, true);
-                            activeLastPointToolip(chart)
-                        }, 1000);
-                    }
-                }
-            },
-            title: {
-                text: 'CO2'
-            },
-            xAxis: {
-                type: 'datetime',
-                tickPixelInterval: 150
-            },
-            yAxis: {
-                title: {
-                    text: 'ppm'
-                },
-                plotLines: [{
-                    value: 0,
-                    width: 1,
-                    color: '#808080'
-                }]
-            },
-            tooltip: {
-                formatter: function () {
-                    return '<b>' + this.series.name + '</b><br/>' +
-                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
-                        Highcharts.numberFormat(this.y, 2);
-                }
-            },
-            legend: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            series: [{
-                name: 'CO2',
-                data: (function () {
-                    // generate an array of random data
-                    var data = [],
-                        time = (new Date()).getTime(),
-                        i;
-                    for (i = -19; i <= 0; i += 1) {
-                        data.push({
-                            x: time + i * 1000,
-                            y: Math.random()
-                        });
-                    }
-                    return data;
-                }())
-            }]
-        }, function(c) {
-            activeLastPointToolip(c)
-        });
-
-    </script>
-
-    <!-- CO CO2 graph END -->
-
-    <!--Temperature & Humidity graph Start-->
-    <script>
-        $(function () {
-            var gaugeOptions = {
-                chart: {
-                    type: 'solidgauge'
-                },
-                title: null,
-                pane: {
-                    center: ['50%', '85%'],
-                    size: '140%',
-                    startAngle: -90,
-                    endAngle: 90,
-                    background: {
-                        backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#EEE',
-                        innerRadius: '60%',
-                        outerRadius: '100%',
-                        shape: 'arc'
-                    }
-                },
-                tooltip: {
-                    enabled: false
-                },
-                // the value axis
-                yAxis: {
-                    stops: [
-                        [0.1, '#55BF3B'], // green
-                        [0.5, '#DDDF0D'], // yellow
-                        [0.9, '#DF5353'] // red
-                    ],
-                    lineWidth: 0,
-                    minorTickInterval: null,
-                    tickPixelInterval: 400,
-                    tickWidth: 0,
-                    title: {
-                        y: -70
-                    },
-                    labels: {
-                        y: 16
-                    }
-                },
-                plotOptions: {
-                    solidgauge: {
-                        dataLabels: {
-                            y: 5,
-                            borderWidth: 0,
-                            useHTML: true
-                        }
-                    }
-                }
-            };
-            // The Temperature gauge
-            $('#containerTemperature').highcharts(Highcharts.merge(gaugeOptions, {
-                yAxis: {
-                    min: 0,
-                    max: 100,
-                    title: {
-                        text: ''
-                    }
-                },
-                series: [{
-                    name: 'Temperature',
-                    data: [25],
-                    dataLabels: {
-                        format: '<div style="text-align:center"><span style="font-size:25px;color:' +
-                        ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y:.1f}</span><br/>' +
-                        '<span style="font-size:12px;color:silver">° C</span></div>'
-                    },
-                    tooltip: {
-                        valueSuffix: ' °C'
-                    }
-                }]
-            }));
-            // The Humidity gauge
-            $('#containerHumidity').highcharts(Highcharts.merge(gaugeOptions, {
-                yAxis: {
-                    min: 0,
-                    max: 100,
-                    title: {
-                        text: ''
-                    }
-                },
-                series: [{
-                    name: 'Humidity',
-                    data: [50],
-                    dataLabels: {
-                        format: '<div style="text-align:center"><span style="font-size:25px;color:' +
-                        ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y:.1f}</span><br/>' +
-                        '<span style="font-size:12px;color:silver">% RH</span></div>'
-                    },
-                    tooltip: {
-                        valueSuffix: ' % RH'
-                    }
-                }]
-            }));
-            // Bring life to the dials
-            setInterval(function () {
-                // Temperature
-                var chart = $('#containerTemperature').highcharts(),
-                    point,
-                    newVal,
-                    inc;
-                if (chart) {
-                    point = chart.series[0].points[0];
-                    inc = Math.random() - 0.5;
-                    newVal = point.y + inc;
-                    if (newVal < 0 || newVal > 100) {
-                        newVal = point.y - inc;
-                    }
-                    point.update(newVal);
-                }
-                // Humidity
-                chart = $('#containerHumidity').highcharts();
-                if (chart) {
-                    point = chart.series[0].points[0];
-                    inc = Math.random() - 0.5;
-                    newVal = point.y + inc;
-                    if (newVal < 0 || newVal > 100) {
-                        newVal = point.y - inc;
-                    }
-                    point.update(newVal);
-                }
-            }, 2000);
-        });
-    </script>
-    <!--Temperature & Humidity graph End-->
-
-    <!--Dew Point graph Start-->
-    <script>
-        $(function () {
-            $('#containerDewPoint').highcharts({
-                chart: {
-                    type: 'spline'
-                },
-                title: {
-                    text: 'Dew Point'
-                },
-                subtitle: {
-                    text: ''
-                },
-                xAxis: {
-                    type: 'datetime',
-                    labels: {
-                        overflow: 'justify'
-                    }
-                },
-                yAxis: {
-                    title: {
-                        text: ' °C'
-                    },
-                    min: 0,
-                    minorGridLineWidth: 0,
-                    gridLineWidth: 0,
-                    alternateGridColor: null,
-                    plotBands: [{ // Light air
-                        from: 0,
-                        to: 10,
-                        color: 'rgba(68, 170, 213, 0.1)',
-                        label: {
-                            text: 'A bit dry for some',
-                            style: {
-                                color: '#606060'
-                            }
-                        }
-                    }, { // Light breeze
-                        from: 10,
-                        to: 12,
-                        color: 'rgba(0, 0, 0, 0)',
-                        label: {
-                            text: 'Very comfortable',
-                            style: {
-                                color: '#606060'
-                            }
-                        }
-                    }, { // Gentle breeze
-                        from: 12,
-                        to: 16,
-                        color: 'rgba(68, 170, 213, 0.1)',
-                        label: {
-                            text: 'Comfortable',
-                            style: {
-                                color: '#606060'
-                            }
-                        }
-                    }, { // Moderate breeze
-                        from: 16,
-                        to: 18,
-                        color: 'rgba(0, 0, 0, 0)',
-                        label: {
-                            text: 'OK for most, but all perceive the humidity at upper edge',
-                            style: {
-                                color: '#606060'
-                            }
-                        }
-                    }, { // Fresh breeze
-                        from: 18,
-                        to: 21,
-                        color: 'rgba(68, 170, 213, 0.1)',
-                        label: {
-                            text: 'Somewhat uncomfortable for most people at upper edge',
-                            style: {
-                                color: '#606060'
-                            }
-                        }
-                    }, { // Strong breeze
-                        from: 21,
-                        to: 24,
-                        color: 'rgba(0, 0, 0, 0)',
-                        label: {
-                            text: 'Very humid, quite uncomfortable',
-                            style: {
-                                color: '#606060'
-                            }
-                        }
-                    }, { // High wind
-                        from: 24,
-                        to: 26,
-                        color: 'rgba(68, 170, 213, 0.1)',
-                        label: {
-                            text: 'Extremely uncomfortable, oppressive',
-                            style: {
-                                color: '#606060'
-                            }
-                        }
-                    }, { // Strong breeze
-                        from: 26,
-                        to: 30,
-                        color: 'rgba(0, 0, 0, 0)',
-                        label: {
-                            text: 'Severely high, even deadly for asthma related illnesses 	',
-                            style: {
-                                color: '#606060'
-                            }
-                        }
-                    }]
-                },
-                tooltip: {
-                    valueSuffix: ' °C'
-                },
-                plotOptions: {
-                    spline: {
-                        lineWidth: 4,
-                        states: {
-                            hover: {
-                                lineWidth: 5
-                            }
-                        },
-                        marker: {
-                            enabled: false
-                        },
-                        pointInterval: 3600000, // one hour
-                        pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
-                    }
-                },
-                series: [{
-                    name: 'Dew Point',
-                    data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 23, 4.1, 5.6, 24, 6.9, 7.1,
-                        7.9, 7.9, 7.5, 6.7, 15, 7.7, 7.4, 7.0, 7.1, 5.8, 5.9, 7.4,
-                        8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 27, 12.1, 9.5, 7.5,
-                        7.1, 7.5, 8.1, 6.8, 20, 2.1, 1.9, 2.8, 2.9, 1.3, 4.4, 4.2,
-                        3.0, 3.0]
-                }],
-                navigation: {
-                    menuItemStyle: {
-                        fontSize: '10px'
-                    }
-                }
-            });
-        });
-    </script>
-    <!--Dew Point graph EDD-->
 
     <!-- FEATURED-PROJECT : STARTS -->
-    <section class="featured-project-block page-section next-bg-two"  data-stellar-background-ratio="2">
+    <section class="featured-project-block page-section next-bg-six"  data-stellar-background-ratio="2">
         <section class="container">
             <div class="row">
 
@@ -753,7 +376,77 @@
                             <div class="liner"><span></span></div>
                         </article>
                     </div>
+                    <br/>
+                    <div>
+                        <div class="container">
+                            <h2><b><li>Light</li></b></h2>
+                            <br/>
+                            <div style="float: left;margin-right: 25%;">
+                                <label class="switch">
+                                    <input id="Light1" type="checkbox" onclick="Light1()">
+                                    <span class="slider round"></span>
+                                </label>
+                                <br/><br/>
+                                <img id="ImgLight1" style="height: 200px;" src="images/Light%20Off_528px.png"/>
+                                <br/><br/>
+                                <div style="font-size: 25px;font-weight: bold;color: darkred;margin-left: 30%;">Light 1</div>
+                            </div>
+                            <div style="float: left;">
+                                <label class="switch">
+                                    <input id="Light2" type="checkbox" onclick="Light2()">
+                                    <span class="slider round"></span>
+                                </label>
+                                <br/><br/>
+                                <img id="ImgLight2" style="height: 200px;" src="images/Light%20Off_528px.png">
+                                <br/><br/>
+                                <div style="font-size: 25px;font-weight: bold;color: darkred;margin-left: 30%;">Light 2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div>
+                        <div class="container">
+                            <h2><b><li>Electronic Glass</li></b></h2>
+                            <br/>
+                            <label class="switch">
+                                <input id="Glass" type="checkbox" onclick="Glass()">
+                                <span class="slider round"></span>
+                            </label>
+                            <br/><br/>
+                            <img id="ImgGlass" style="height: 200px;" src="images/Clean_500px.png"/>
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div>
+                        <div class="container">
+                            <h2><b><li>Projection</li></b></h2>
+                            <br/>
 
+                            <div style="float: left;margin-right: 25%;">
+                                <label class="switch">
+                                    <input id="Projector" type="checkbox" onclick="Projector()">
+                                    <span class="slider round"></span>
+                                </label>
+                                <div style="position: relative">
+                                    <div id="PowerProjector" style="position: absolute;top:110px;left: 100px  ;color: rgba(255,0,0,0.7);font-size:30px;padding-bottom: 0px;">●</div>
+                                    <img style="height: 200px;" src="images/Video Projector1_500px.png"/>
+                                </div>
+                            </div>
+                            <div style="float: left;">
+                                <label class="switch">
+                                    <input id="Screen" type="checkbox" onclick="Screen()">
+                                    <span class="slider round"></span>
+                                </label>
+                                <div>
+                                    <!--投影幕-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </section>
 
@@ -762,6 +455,46 @@
         </section>
     </section>
     <!-- FEATURED-PROJECT   : ENDS -->
+    <!--Meeting Room Start-->
+    <script>
+        var Li1 = document.getElementById("Light1");
+        var Li2 = document.getElementById("Light2");
+        var ILi1 = document.getElementById("ImgLight1");
+        var ILi2 = document.getElementById("ImgLight2");
+        var glass = document.getElementById("Glass");
+        var Iglass= document.getElementById("ImgGlass");
+        var projector = document.getElementById("Projector");
+        var PowerProjector= document.getElementById("PowerProjector");
+        function Light1() {
+            if (Li1.checked==true){
+                ILi1.src="images/Light On_528px.png";
+            }else if (Li1.checked==false) {
+                ILi1.src="images/Light%20Off_528px.png";
+            }
+        }
+        function Light2() {
+            if (Li2.checked==true){
+                ILi2.src="images/Light On_528px.png"
+            }else if (Li2.checked==false) {
+                ILi2.src="images/Light%20Off_528px.png"
+            }
+        }
+        function Glass() {
+            if (glass.checked==true){
+                Iglass.src="images/Clean1_500px.png"
+            }else if (glass.checked==false) {
+                Iglass.src="images/Clean_500px.png"
+            }
+        }
+        function Projector() {
+            if (projector.checked==true){
+                PowerProjector.style=" position: absolute;top:110px;left: 100px  ;color: rgba(0,255,0,0.7);font-size:30px;padding-bottom: 0px;"
+            }else if (projector.checked==false) {
+                PowerProjector.style=" position: absolute;top:110px;left: 100px  ;color: rgba(255,0,0,0.7);font-size:30px;padding-bottom: 0px;"
+            }
+        }
+    </script>
+    <!--Meeting Room END-->
 
     <!-- FOOTER : STARTS -->
     <footer id="mastfoot">
@@ -872,7 +605,405 @@
     } );
 </script>
 
+<!-- CO CO2 graph START-->
+<script>
+    Highcharts.setOptions({
+        global: {
+            useUTC: false
+        }
+    });
+    function activeLastPointToolip(chart) {
+        var points = chart.series[0].points;
+        chart.tooltip.refresh(points[points.length -1]);
+    }
+    $('#containerCO').highcharts({
+        chart: {
+            type: 'spline',
+            animation: Highcharts.svg, // don't animate in old IE
+            marginRight: 10,
+            events: {
+                load: function () {
+                    // set up the updating of the chart each second
+                    var series = this.series[0],
+                        chart = this;
+                    setInterval(function () {
+                        var x = (new Date()).getTime(), // current time
+                            y = Math.random();
+                        series.addPoint([x, y], true, true);
+                        activeLastPointToolip(chart)
+                    }, 1000);
+                }
+            }
+        },
+        title: {
+            text: 'CO'
+        },
+        xAxis: {
+            type: 'datetime',
+            tickPixelInterval: 150
+        },
+        yAxis: {
+            title: {
+                text: 'ppm'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.series.name + '</b><br/>' +
+                    Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                    Highcharts.numberFormat(this.y, 2);
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        exporting: {
+            enabled: false
+        },
+        series: [{
+            name: 'CO',
+            data: (function () {
+                // generate an array of random data
+                var data = [],
+                    time = (new Date()).getTime(),
+                    i;
+                for (i = -19; i <= 0; i += 1) {
+                    data.push({
+                        x: time + i * 1000,
+                        y: Math.random()
+                    });
+                }
+                return data;
+            }())
+        }]
+    }, function(c) {
+        activeLastPointToolip(c)
+    });
 
+</script>
+<script>
+    Highcharts.setOptions({
+        global: {
+            useUTC: false
+        }
+    });
+    function activeLastPointToolip(chart) {
+        var points = chart.series[0].points;
+        chart.tooltip.refresh(points[points.length -1]);
+    }
+    $('#containerCO2').highcharts({
+        chart: {
+            type: 'spline',
+            animation: Highcharts.svg, // don't animate in old IE
+            marginRight: 10,
+            events: {
+                load: function () {
+                    // set up the updating of the chart each second
+                    var series = this.series[0],
+                        chart = this;
+                    setInterval(function () {
+                        var x = (new Date()).getTime(), // current time
+                            y = Math.random();
+                        series.addPoint([x, y], true, true);
+                        activeLastPointToolip(chart)
+                    }, 1000);
+                }
+            }
+        },
+        title: {
+            text: 'CO2'
+        },
+        xAxis: {
+            type: 'datetime',
+            tickPixelInterval: 150
+        },
+        yAxis: {
+            title: {
+                text: 'ppm'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.series.name + '</b><br/>' +
+                    Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                    Highcharts.numberFormat(this.y, 2);
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        exporting: {
+            enabled: false
+        },
+        series: [{
+            name: 'CO2',
+            data: (function () {
+                // generate an array of random data
+                var data = [],
+                    time = (new Date()).getTime(),
+                    i;
+                for (i = -19; i <= 0; i += 1) {
+                    data.push({
+                        x: time + i * 1000,
+                        y: Math.random()
+                    });
+                }
+                return data;
+            }())
+        }]
+    }, function(c) {
+        activeLastPointToolip(c)
+    });
+
+</script>
+
+<!-- CO CO2 graph END -->
+
+<!--Temperature & Humidity graph Start-->
+<script>
+    $(function () {
+        var gaugeOptions = {
+            chart: {
+                type: 'solidgauge'
+            },
+            title: null,
+            pane: {
+                center: ['50%', '85%'],
+                size: '140%',
+                startAngle: -90,
+                endAngle: 90,
+                background: {
+                    backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#EEE',
+                    innerRadius: '60%',
+                    outerRadius: '100%',
+                    shape: 'arc'
+                }
+            },
+            tooltip: {
+                enabled: false
+            },
+            // the value axis
+            yAxis: {
+                stops: [
+                    [0.1, '#55BF3B'], // green
+                    [0.5, '#DDDF0D'], // yellow
+                    [0.9, '#DF5353'] // red
+                ],
+                lineWidth: 0,
+                minorTickInterval: null,
+                tickPixelInterval: 400,
+                tickWidth: 0,
+                title: {
+                    y: -70
+                },
+                labels: {
+                    y: 16
+                }
+            },
+            plotOptions: {
+                solidgauge: {
+                    dataLabels: {
+                        y: 5,
+                        borderWidth: 0,
+                        useHTML: true
+                    }
+                }
+            }
+        };
+        // The Temperature gauge
+        $('#containerTemperature').highcharts(Highcharts.merge(gaugeOptions, {
+            yAxis: {
+                min: 0,
+                max: 100,
+                title: {
+                    text: ''
+                }
+            },
+            series: [{
+                name: 'Temperature',
+                data: [25],
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y:.1f}</span><br/>' +
+                    '<span style="font-size:12px;color:silver">° C</span></div>'
+                },
+                tooltip: {
+                    valueSuffix: ' °C'
+                }
+            }]
+        }));
+        // The Humidity gauge
+        $('#containerHumidity').highcharts(Highcharts.merge(gaugeOptions, {
+            yAxis: {
+                min: 0,
+                max: 100,
+                title: {
+                    text: ''
+                }
+            },
+            series: [{
+                name: 'Humidity',
+                data: [50],
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y:.1f}</span><br/>' +
+                    '<span style="font-size:12px;color:silver">% RH</span></div>'
+                },
+                tooltip: {
+                    valueSuffix: ' % RH'
+                }
+            }]
+        }));
+        // Bring life to the dials
+        setInterval(function () {
+            // Temperature
+            var chart = $('#containerTemperature').highcharts(),
+                point,
+                newVal,
+                inc;
+            if (chart) {
+                point = chart.series[0].points[0];
+                inc = Math.random() - 0.5;
+                newVal = point.y + inc;
+                if (newVal < 0 || newVal > 100) {
+                    newVal = point.y - inc;
+                }
+                point.update(newVal);
+            }
+            // Humidity
+            chart = $('#containerHumidity').highcharts();
+            if (chart) {
+                point = chart.series[0].points[0];
+                inc = Math.random() - 0.5;
+                newVal = point.y + inc;
+                if (newVal < 0 || newVal > 100) {
+                    newVal = point.y - inc;
+                }
+                point.update(newVal);
+            }
+        }, 2000);
+    });
+</script>
+<!--Temperature & Humidity graph End-->
+
+<!--Dew Point graph Start-->
+<script>
+    $(function () {
+        $('#containerDewPoint').highcharts({
+            chart: {
+                type: 'spline'
+            },
+            title: {
+                text: ''
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: {
+                type: 'datetime',
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            yAxis: {
+                title: {
+                    text: ' °C'
+                },
+                min: 0,
+                minorGridLineWidth: 0,
+                gridLineWidth: 0,
+                alternateGridColor: null,
+                plotBands: [{ // Light air
+                    from: 0,
+                    to: 10,
+                    color: 'rgba(150, 0, 0, 0.3)',
+                    label: {
+                        text: 'Dry',
+                        style: {
+                            color: '#000000',
+                            fontSize: '15px'
+                        }
+                    }
+                }, { // Gentle breeze
+                    from: 10,
+                    to: 16,
+                    color: 'rgba(68, 170, 213, 0.3)',
+                    label: {
+                        text: 'Comfortable',
+                        style: {
+                            color: '#000000',
+                            fontSize: '15px'
+                        }
+                    }
+                }, { // Moderate breeze
+                    from: 16,
+                    to: 24,
+                    color: 'rgba(150, 0, 0, 0.3)',
+                    label: {
+                        text: 'Uncomfortable',
+                        style: {
+                            color: '#000000',
+                            fontSize: '15px'
+                        }
+                    }
+                }, { // High wind
+                    from: 24,
+                    to: 40,
+                    color: 'rgba(68, 170, 213, 0.3)',
+                    label: {
+                        text: 'Deadly',
+                        style: {
+                            color: '#000000',
+                            fontSize: '15px'
+                        }
+                    }
+                }]
+            },
+            tooltip: {
+                valueSuffix: ' °C'
+            },
+            plotOptions: {
+                spline: {
+                    lineWidth: 4,
+                    states: {
+                        hover: {
+                            lineWidth: 5
+                        }
+                    },
+                    marker: {
+                        enabled: false
+                    },
+                    pointInterval: 3600000, // one hour
+                    pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
+                }
+            },
+            series: [{
+                name: 'Dew Point',
+                data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 23, 4.1, 5.6, 24, 6.9, 7.1,
+                    7.9, 7.9, 7.5, 6.7, 15, 7.7, 7.4, 7.0, 7.1, 5.8, 5.9, 7.4,
+                    8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 27, 12.1, 9.5, 7.5,
+                    7.1, 7.5, 8.1, 6.8, 20, 2.1, 1.9, 2.8, 2.9, 1.3, 4.4, 4.2,
+                    3.0, 3.0]
+            }],
+            navigation: {
+                menuItemStyle: {
+                    fontSize: '10px'
+                }
+            }
+        });
+    });
+</script>
+<!--Dew Point graph EDD-->
 
 
 
