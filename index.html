@@ -61,7 +61,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body onload="ShowTime()">
 
 
 <!-- Preloader -->
@@ -539,56 +539,253 @@
             <div class="row add-top add-bottom fx fx-bounceIn">
                 <article class="col-md-12 text-left">
                     <ul class="rb-grid clearfix">
-                        <li class="rb-span-2 next-bg-one" style="height: 300px;">
+                        <li class="rb-span-2 next-bg-one" style="width:60%;height: 460px;">
                             <h3 style="float: left;">Camera</h3><span class="rb-temp"></span>
-                            <img class="service-thumb" style="width:50px; float: right;" src="images/icons/camera.png"/>
-                            <div  id="" style="height: 200px"; ></div>
-
-                        </li>
-                        <li class="rb-span-2 next-bg-nine" style="height: 300px;">
-                            <h3 style="float: left;">Access Control System</h3><span class="rb-temp"></span>
-                            <img class="service-thumb" style="width:50px; float:right;" src="images/icons/door.png"/>
-                        </li>
-                        <li class="rb-span-4 next-bg-five" style="height: 300px;">
-                            <h3 style="float: left;">Data Logger</h3><span class="rb-temp"></span>
-                            <img class="service-thumb" style="width:50px; float:right;" src="images/icons/air.png"/>
-                            <br/><br/>
-                            <div style="text-align: center;border-width:3px;border-style:dashed;border-color:#FFAC55;padding:5px;">
-                                <div style="width: 18%;height:40px;float: left;padding-top: 1%;">CO</div>
-                                <div style="width: 18%;height:40px;float: left;padding-top: 1%;">CO2</div>
-                                <div style="width: 18%;height:40px;float: left;padding-top: 1%;">Temperature</div>
-                                <div style="width: 18%;height:40px;float: left;padding-top: 1%;">Humidity</div>
-                                <div style="width: 18%;height:40px;float: left;padding-top: 1%;">Dew Point</div>
+                            <img class="service-thumb" style="width:50px; float: right; margin-top: 0px;" src="images/icons/camera.png"/>
+                            <div  style="background-image:url('images/iPad_450px.png');width:450px; position: relative; height:450px;margin-left: 5%;margin-top: 3%;" >
+                                <div style="position: absolute;top:99px;left:64px;background-color: black;width: 74%;height: 56%;"></div>
                             </div>
-                            <div style="text-align: center; ">
-                                <div style="width: 18%;height:130px;float: left;font-size: 40px;padding-top: 5%;">1000</div>
-                                <div style="width: 18%;height:130px;float: left;font-size: 40px;padding-top: 5%;">9000</div>
-                                <div style="width: 18%;height:130px;float: left;font-size: 40px;padding-top: 5%;">-10</div>
-                                <div style="width: 18%;height:130px;float: left;font-size: 40px;padding-top: 5%;">100</div>
-                                <div style="width: 18%;height:130px;float: left;font-size: 40px;padding-top: 5%;">0.1</div>
-                            </div>
-                            <div style="text-align: right; ">
-                                <div style="width: 18%;float: left;padding-right: 1%;">ppm</div>
-                                <div style="width: 18%;float: left;padding-right: 1%;">ppm</div>
-                                <div style="width: 18%;float: left;padding-right: 1%;">°C</div>
-                                <div style="width: 18%;float: left;padding-right: 1%;">% RH</div>
-                                <div style="width: 18%;float: left;padding-right: 1%;">°C</div>
-                            </div>
-
                         </li>
-                        <li class="rb-span-2 next-bg-four" style="height: 300px; width: 33%;">
+                        <li class="rb-span-2 next-bg-nine" style="width:38%;height: 460px;">
                             <h3 style="float: left;">Light</h3><span class="rb-temp"></span>
-                            <img class="service-thumb" style="width:50px; float: right" src="images/icons/light.png"/>
-
+                            <img class="service-thumb" style="width:50px; float: right; margin-top: 0px;" src="images/icons/light.png"/>
+                            <br/><br/><br/><br/>
+                            <div style="margin-left: 10%;font-size: 35px;">
+                                <div id="DotL1" style="float: left;margin-right: 3%;color: red;">●</div>
+                                <div style="float: left;color: black;font-weight: bold;">Light1：</div>
+                                <div style="color: red;font-weight: bold;">OFF</div>
+                                <br/><br/>
+                                <div id="DotL2" style="float: left;margin-right: 3%;color: red;">●</div>
+                                <div style="float: left;color: black;font-weight: bold;">Light2：</div>
+                                <div style="color: red;font-weight: bold;">OFF</div>
+                            </div>
                         </li>
-                        <li class="rb-span-3 next-bg-eight" style="height: 300px; width: 32%;" >
-                            <h3 style="float: left;">Projection</h3><span class="rb-temp"></span>
-                            <img class="service-thumb" style="width:50px; float:right;" src="images/icons/08.png"/>
+                        <li class="rb-span-4 next-bg-seven" style="height: 300px;">
+                            <h3 style="float: left;">Data Logger</h3><span class="rb-temp"></span>
+                            <img class="service-thumb" style="width:50px; float:right; margin-top: 0px;" src="images/icons/air.png"/>
+                            <br/><br/>
+                            <div style="margin-left: 5%;">
+                                <div style="text-align: left;padding:5px;">
+                                    <div style="width: 18%;height:40px;float: left;padding-top: 1%;color: blue;font-weight: bold;font-size: 20px;"><u>CO</u></div>
+                                    <div style="width: 18%;height:40px;float: left;padding-top: 1%;color: blue;font-weight: bold;font-size: 20px;"><u>CO2</u></div>
+                                    <div style="width: 18%;height:40px;float: left;padding-top: 1%;color: blue;font-weight: bold;font-size: 20px;"><u>Temperature</u></div>
+                                    <div style="width: 18%;height:40px;float: left;padding-top: 1%;color: blue;font-weight: bold;font-size: 20px;"><u>Humidity</u></div>
+                                    <div style="width: 18%;height:40px;float: left;padding-top: 1%;color: blue;font-weight: bold;font-size: 20px;"><u>Dew Point</u></div>
+                                </div>
+                                <div style="text-align: center; ">
+                                    <div style="width: 18%;height:130px;float: left;font-size: 40px;padding-top: 5%;">1000</div>
+                                    <div style="width: 18%;height:130px;float: left;font-size: 40px;padding-top: 5%;">9000</div>
+                                    <div style="width: 18%;height:130px;float: left;font-size: 40px;padding-top: 5%;">-10</div>
+                                    <div style="width: 18%;height:130px;float: left;font-size: 40px;padding-top: 5%;">100</div>
+                                    <div style="width: 18%;height:130px;float: left;font-size: 40px;padding-top: 5%;">0.1</div>
+                                </div>
+                                <div style="text-align: right; ">
+                                    <div style="width: 18%;float: left;padding-right: 1%;color: black;">ppm</div>
+                                    <div style="width: 18%;float: left;padding-right: 1%;color: black;">ppm</div>
+                                    <div style="width: 18%;float: left;padding-right: 1%;color: black;">°C</div>
+                                    <div style="width: 18%;float: left;padding-right: 1%;color: black;">% RH</div>
+                                    <div style="width: 18%;float: left;padding-right: 1%;color: black;">°C</div>
+                                </div>
+                            </div>
                         </li>
+                        <li class="rb-span-2 next-bg-five" style="height: 400px; width: 33%;">
+                            <div>
+                                <h3 style="float: left;">Projection</h3><span class="rb-temp"></span>
+                                <img class="service-thumb" style="width:50px; float:right; margin-top: 0px;" src="images/icons/08.png"/>
+                                <br/><br/><br/><br/>
+                                <div style="margin-left: 10%;font-size: 25px;">
+                                    <div id="DotP" style="float: left;margin-right: 3%;color: red;">●</div>
+                                    <div style="float: left;color: purple;font-weight: bold;">Projector：</div>
+                                    <div style="color: red;font-weight: bold;">OFF</div>
+                                    <br/>
+                                    <div id="DotS" style="float: left;margin-right: 3%;color: red;">●</div>
+                                    <div style="float: left;color: purple;font-weight: bold;">Screen：</div>
+                                    <div style="color: red;font-weight: bold;">OFF</div>
+                                </div>
+                            </div>
+                            <br/>
+                            <div>
+                                <h3 style="float: left;">Electronic Glass</h3><span class="rb-temp"></span>
+                                <img class="service-thumb" style="width:50px; float:right; margin-top: 0px;" src="images/icons/clean.png"/>
+                                <div id="DotE" style="margin-left: 20%;margin-top: 15%;float: left;margin-right: 3%;font-size: 25px;color: red;">●</div>
+                                <div style="color: red;font-weight: bold;font-size: 25px;margin-top: 15%;float: left;">OFF</div>
+                            </div>
+                        </li>
+                        <li class="rb-span-3 next-bg-four" style="height: 400px; width: 65%;" >
+                            <h3 style="float: left;">Access Control System</h3><span class="rb-temp"></span>
+                            <img class="service-thumb" style="width:50px; float:right; margin-top: 0px;" src="images/icons/door.png"/>
+                            <br/><br/>
+                            <div id="showbox" style="color: hotpink;font-weight: bold;font-size: 25px;"></div>
+                            <br/>
+                            <div style="overflow-y: scroll;height: 70%; ">
+                                <table id="Infolist" class="table table-hover">
+                                    <thead >
+                                    <tr style="color: greenyellow;">
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Department</th>
+                                        <th>Status</th>
+                                        <th>Time of arrival</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="PunchCard" >
+                                    <tr class="active">
+                                        <td>
+                                            20170830
+                                        </td>
+                                        <td>
+                                            Kobe Bryant
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-calendar"></i> Accounting
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-dollar"></i>On Time
+                                        </td>
+                                        <td class="project-title">
+                                            11:20:25
+                                        </td>
+                                    </tr>
+                                    <tr class="active">
+                                        <td>
+                                            20170830
+                                        </td>
+                                        <td>
+                                            Kobe Bryant
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-calendar"></i> Accounting
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-dollar"></i>On Time
+                                        </td>
+                                        <td class="project-title">
+                                            11:20:25
+                                        </td>
+                                    </tr>
+                                    <tr class="active">
+                                        <td>
+                                            20170830
+                                        </td>
+                                        <td>
+                                            Kobe Bryant
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-calendar"></i> Accounting
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-dollar"></i>On Time
+                                        </td>
+                                        <td class="project-title">
+                                            11:20:25
+                                        </td>
+                                    </tr>
+                                    <tr class="active">
+                                        <td>
+                                            20170830
+                                        </td>
+                                        <td>
+                                            Kobe Bryant
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-calendar"></i> Accounting
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-dollar"></i>On Time
+                                        </td>
+                                        <td class="project-title">
+                                            11:20:25
+                                        </td>
+                                    </tr>
+                                    <tr class="active">
+                                        <td>
+                                            20170830
+                                        </td>
+                                        <td>
+                                            Kobe Bryant
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-calendar"></i> Accounting
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-dollar"></i>On Time
+                                        </td>
+                                        <td class="project-title">
+                                            11:20:25
+                                        </td>
+                                    </tr>
+                                    <tr class="active">
+                                        <td>
+                                            20170830
+                                        </td>
+                                        <td>
+                                            Kobe Bryant
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-calendar"></i> Accounting
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-dollar"></i>On Time
+                                        </td>
+                                        <td class="project-title">
+                                            11:20:25
+                                        </td>
+                                    </tr>
+                                    <tr class="active">
+                                        <td>
+                                            20170830
+                                        </td>
+                                        <td>
+                                            Kobe Bryant
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-calendar"></i> Accounting
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-dollar"></i>On Time
+                                        </td>
+                                        <td class="project-title">
+                                            11:20:25
+                                        </td>
+                                    </tr>
 
-                        <li class="rb-span-3 next-bg-seven" style="height: 300px; width: 32%;">
-                            <h3 style="float: left;">Electronic Glass</h3><span class="rb-temp"></span>
-                            <img class="service-thumb" style="width:50px; float:right;" src="images/icons/clean.png"/>
+                                    <tr class="warning">
+                                        <td>
+                                            20170830
+                                        </td>
+                                        <td>
+                                            Kobe Bryant
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-calendar"></i> Accounting
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-dollar"></i>Late
+                                        </td>
+                                        <td class="project-title">
+                                            11:20:25
+                                        </td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>
+                                            20170830
+                                        </td>
+                                        <td>
+                                            Kobe Bryant
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-calendar"></i> Accounting
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-dollar"></i>Absence
+                                        </td>
+                                        <td class="project-title">
+                                            11:20:25
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </li>
                     </ul>
                 </article>
@@ -607,6 +804,27 @@
 
         </section>
     </section>
+    <script language="JavaScript">
+        function ShowTime(){
+            var NowDate=new Date();
+            var year=NowDate.getFullYear();
+            var month=NowDate.getMonth()+1;
+            var day=NowDate.getDate();
+            var h=NowDate.getHours();
+            var m=NowDate.getMinutes();
+            var s=NowDate.getSeconds();
+
+            function addZero(i)  //時間個位數時補零   ex:   5 -> 05
+            {
+                if (i < 10) {
+                    i = "0" + i;
+                }
+                return i;
+            }
+            document.getElementById('showbox').innerHTML ='現在時間： '+year+ '/' +addZero(month)+ '/' +addZero(day)+ '       '+addZero(h) +'：'+addZero(m)+'：'+addZero(s) ;
+            setTimeout('ShowTime()',1000);
+        }
+    </script>
     <!-- OFFICE : ENDS -->
 
 

@@ -118,7 +118,7 @@
     </style>
 </head>
 
-<body>
+<body onload="ShowTime()">
 
 
 <!-- Preloader -->
@@ -204,78 +204,186 @@
 
                     <div class="row add-top">
                         <h2><b><li>Camera</li></b></h2>
-                        <br/>
-                        <article class="col-md-12 text-left">
-                            <img alt="" title="" class="img-responsive" src="images/projects/01.png"/>
-                        </article>
+                        <div style="background-image:url('images/iMac_900px.png');width:900px; height:900px;position: relative;">
+                            <div style="position: absolute;top:125px;left:36px;width: 92%;height: 62%;background-color: black;-webkit-border-radius: 15px; -moz-border-radius: 15px;
+                                        border-radius: 15px;"></div>
+                        </div>
                     </div>
+                    <br/><br/>
                     <div>
                         <h2><b><li>Access Control System</li></b></h2>
                         <br/>
-                        <table id="Infolist" class="table table-hover">
-                            <thead >
-                            <tr>
-                                <th>Employee ID</th>
-                                <th>Name</th>
-                                <th>Department</th>
-                                <th>Status</th>
-                                <th>Time of arrival</th>
-                            </tr>
-                            </thead>
-                            <tbody id="PunchCard" >
-                            <tr>
-                                <td>
-                                    EC20170811001
-                                </td>
-                                <td>
-                                    Kobe Bryant
-                                </td>
-                                <td>
-                                    <i class="fa fa-calendar"></i> Accounting
-                                </td>
-                                <td>
-                                    <i class="fa fa-dollar"></i>On Time
-                                </td>
-                                <td class="project-title">
-                                    11:20:25
-                                </td>
-                            </tr>
-                            <tr class="warning">
-                                <td>
-                                    EC20170811001
-                                </td>
-                                <td>
-                                    Kobe Bryant
-                                </td>
-                                <td>
-                                    <i class="fa fa-calendar"></i> Accounting
-                                </td>
-                                <td>
-                                    <i class="fa fa-dollar"></i>Late
-                                </td>
-                                <td class="project-title">
-                                    11:20:25
-                                </td>
-                            </tr>
-                            <tr class="danger">
-                                <td>
-                                    EC20170811001
-                                </td>
-                                <td>
-                                    Kobe Bryant
-                                </td>
-                                <td>
-                                    <i class="fa fa-calendar"></i> Accounting
-                                </td>
-                                <td>
-                                    <i class="fa fa-dollar"></i>Absence
-                                </td>
-                                <td class="project-title">
-                                    11:20:25
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <div id="showbox" style="color: #0b9600;font-weight: bold;font-size: 25px;"></div>
+                        <br/>
+                        <div style="overflow-y: scroll;height: 240px; ">
+                            <table id="Infolist" class="table table-hover">
+                                <thead >
+                                <tr style="color: #c717bb;font-weight: bold;">
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Department</th>
+                                    <th>Status</th>
+                                    <th>Time of arrival</th>
+                                </tr>
+                                </thead>
+                                <tbody id="PunchCard" >
+                                <tr class="active">
+                                    <td>
+                                        20170830
+                                    </td>
+                                    <td>
+                                        Kobe Bryant
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-calendar"></i> Accounting
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-dollar"></i>On Time
+                                    </td>
+                                    <td class="project-title">
+                                        11:20:25
+                                    </td>
+                                </tr>
+                                <tr class="active">
+                                    <td>
+                                        20170830
+                                    </td>
+                                    <td>
+                                        Kobe Bryant
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-calendar"></i> Accounting
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-dollar"></i>On Time
+                                    </td>
+                                    <td class="project-title">
+                                        11:20:25
+                                    </td>
+                                </tr>
+                                <tr class="active">
+                                    <td>
+                                        20170830
+                                    </td>
+                                    <td>
+                                        Kobe Bryant
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-calendar"></i> Accounting
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-dollar"></i>On Time
+                                    </td>
+                                    <td class="project-title">
+                                        11:20:25
+                                    </td>
+                                </tr>
+                                <tr class="active">
+                                    <td>
+                                        20170830
+                                    </td>
+                                    <td>
+                                        Kobe Bryant
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-calendar"></i> Accounting
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-dollar"></i>On Time
+                                    </td>
+                                    <td class="project-title">
+                                        11:20:25
+                                    </td>
+                                </tr>
+                                <tr class="active">
+                                    <td>
+                                        20170830
+                                    </td>
+                                    <td>
+                                        Kobe Bryant
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-calendar"></i> Accounting
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-dollar"></i>On Time
+                                    </td>
+                                    <td class="project-title">
+                                        11:20:25
+                                    </td>
+                                </tr>
+                                <tr class="active">
+                                    <td>
+                                        20170830
+                                    </td>
+                                    <td>
+                                        Kobe Bryant
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-calendar"></i> Accounting
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-dollar"></i>On Time
+                                    </td>
+                                    <td class="project-title">
+                                        11:20:25
+                                    </td>
+                                </tr>
+                                <tr class="active">
+                                    <td>
+                                        20170830
+                                    </td>
+                                    <td>
+                                        Kobe Bryant
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-calendar"></i> Accounting
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-dollar"></i>On Time
+                                    </td>
+                                    <td class="project-title">
+                                        11:20:25
+                                    </td>
+                                </tr>
+
+                                <tr class="warning">
+                                    <td>
+                                        20170830
+                                    </td>
+                                    <td>
+                                        Kobe Bryant
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-calendar"></i> Accounting
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-dollar"></i>Late
+                                    </td>
+                                    <td class="project-title">
+                                        11:20:25
+                                    </td>
+                                </tr>
+                                <tr class="danger">
+                                    <td>
+                                        20170830
+                                    </td>
+                                    <td>
+                                        Kobe Bryant
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-calendar"></i> Accounting
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-dollar"></i>Absence
+                                    </td>
+                                    <td class="project-title">
+                                        11:20:25
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
 
@@ -286,6 +394,124 @@
         </section>
     </section>
     <!-- FEATURED-PROJECT   : ENDS -->
+    <!--Now Time Start-->
+    <script language="JavaScript">
+        function ShowTime(){
+            var NowDate=new Date();
+            var year=NowDate.getFullYear();
+            var month=NowDate.getMonth()+1;
+            var day=NowDate.getDate();
+            var h=NowDate.getHours();
+            var m=NowDate.getMinutes();
+            var s=NowDate.getSeconds();
+
+            function addZero(i)  //時間個位數時補零   ex:   5 -> 05
+            {
+                if (i < 10) {
+                    i = "0" + i;
+                }
+                return i;
+            }
+            document.getElementById('showbox').innerHTML ='現在時間： '+year+ '/' +addZero(month)+ '/' +addZero(day)+ '       '+addZero(h) +'：'+addZero(m)+'：'+addZero(s) ;
+            setTimeout('ShowTime()',1000);
+        }
+    </script>
+    <!--Now Time END-->
+    <!-- FEATURED-PROJECT : STARTS -->
+    <section class="featured-project-block page-section next-bg-six"  data-stellar-background-ratio="2">
+        <section class="container">
+            <div class="row">
+
+                <section class="container">
+
+                    <div class="row">
+                        <article class="col-md-12 text-left">
+                            <h2 class="page-heading-alt">Meeting Room</h2>
+                            <div class="liner"><span></span></div>
+                        </article>
+                    </div>
+                    <br/>
+                    <div style="float: left;">
+                        <div class="container">
+                            <h2 style="text-align: center;"><b>Light & Electronic Glass</b></h2>
+                            <br/><br/>
+                            <div style="float: left;margin-right: 17%;">
+                                <label class="switch" style="float: left;">
+                                    <input id="Light1" type="checkbox" onclick="Light1()">
+                                    <span class="slider round"></span>
+                                </label>
+                                <div style="font-size: 25px;font-weight: bold;color: darkred;margin-left: 5%;float: left;">Light 1</div>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <img id="ImgLight1" style="height: 200px;" src="images/Light%20Off_528px.png"/>
+                            </div>
+                            <div style="float: left;margin-right: 17%;">
+                                <label class="switch" style="float: left;">
+                                    <input id="Light2" type="checkbox" onclick="Light2()">
+                                    <span class="slider round"></span>
+                                </label>
+                                <div style="font-size: 25px;font-weight: bold;color: darkred;margin-left: 5%;float: left;">Light 2</div>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <img id="ImgLight2" style="height: 200px;" src="images/Light%20Off_528px.png">
+                            </div>
+                            <div style="float: left;">
+                                <label class="switch" style="float: left;">
+                                    <input id="Glass" type="checkbox" onclick="Glass()">
+                                    <span class="slider round"></span>
+                                </label>
+                                <div style="font-size: 25px;font-weight: bold;color: darkred;margin-left: 5%;float: left;">E-Glass</div>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <img id="ImgGlass" style="height: 200px;" src="images/Clean_500px.png"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 45%;">
+                        <div class="container">
+                            <h2 style="text-align: center;"><b>Projection</b></h2>
+                            <br/><br/>
+                            <!--<div style="font-size: 25px;font-weight: bold;color: darkred;margin-left: 5%;">Projector & Screen</div>-->
+                            <br/>
+                            <div style="float: left;margin-right: 22%; position: relative;margin-left: 18%;">
+                                <label class="switch">
+                                    <input id="Projector" type="checkbox" onclick="Projector()">
+                                    <span class="slider round"></span>
+                                </label>
+                                <div style="font-size: 25px;font-weight: bold;color: darkred;position: absolute;top:2px;left:75px;">Projector</div>
+
+                                <div style="position: relative">
+                                    <img style="height: 200px;" src="images/Video Projector1_500px.png"/>
+                                    <div id="PowerProjector" style="position: absolute;top:115px;left: 110px  ;color: rgba(255,0,0,0.7);font-size:30px;padding-bottom: 0px;">●</div>
+                                    <!--<img style="height: 200px;" src="images/Video Projector1_500px.png"/>-->
+                                </div>
+                            </div>
+                            <div style="float: left;">
+                                <label class="switch" style="float: left;margin-bottom: 5%; ">
+                                    <input id="screen" type="checkbox" onclick="Screen()">
+                                    <span class="slider round"></span>
+                                </label>
+                                <div style="font-size: 25px;font-weight: bold;color: darkred;margin-left: 5%;float: left;">Screen</div>
+
+                                <div>
+                                    <!--投影幕-->
+                                    <img id="ScreenShow" src="images/Projector/screen13.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+    </section>
+    <!-- FEATURED-PROJECT   : ENDS -->
+
 
 
     <!-- FEATURED-PROJECT : STARTS -->
@@ -360,101 +586,6 @@
         </section>
     </section>
     <!-- FEATURED-PROJECT   : ENDS -->
-
-
-
-    <!-- FEATURED-PROJECT : STARTS -->
-    <section class="featured-project-block page-section next-bg-six"  data-stellar-background-ratio="2">
-        <section class="container">
-            <div class="row">
-
-                <section class="container">
-
-                    <div class="row">
-                        <article class="col-md-12 text-left">
-                            <h2 class="page-heading-alt">Meeting Room</h2>
-                            <div class="liner"><span></span></div>
-                        </article>
-                    </div>
-                    <br/>
-                    <div>
-                        <div class="container">
-                            <h2><b><li>Light</li></b></h2>
-                            <br/>
-                            <div style="float: left;margin-right: 25%;">
-                                <label class="switch">
-                                    <input id="Light1" type="checkbox" onclick="Light1()">
-                                    <span class="slider round"></span>
-                                </label>
-                                <br/><br/>
-                                <img id="ImgLight1" style="height: 200px;" src="images/Light%20Off_528px.png"/>
-                                <br/><br/>
-                                <div style="font-size: 25px;font-weight: bold;color: darkred;margin-left: 30%;">Light 1</div>
-                            </div>
-                            <div style="float: left;">
-                                <label class="switch">
-                                    <input id="Light2" type="checkbox" onclick="Light2()">
-                                    <span class="slider round"></span>
-                                </label>
-                                <br/><br/>
-                                <img id="ImgLight2" style="height: 200px;" src="images/Light%20Off_528px.png">
-                                <br/><br/>
-                                <div style="font-size: 25px;font-weight: bold;color: darkred;margin-left: 30%;">Light 2</div>
-                            </div>
-                        </div>
-                    </div>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <div>
-                        <div class="container">
-                            <h2><b><li>Electronic Glass</li></b></h2>
-                            <br/>
-                            <label class="switch">
-                                <input id="Glass" type="checkbox" onclick="Glass()">
-                                <span class="slider round"></span>
-                            </label>
-                            <br/><br/>
-                            <img id="ImgGlass" style="height: 200px;" src="images/Clean_500px.png"/>
-                        </div>
-                    </div>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <div>
-                        <div class="container">
-                            <h2><b><li>Projection</li></b></h2>
-                            <br/>
-
-                            <div style="float: left;margin-right: 25%;">
-                                <label class="switch">
-                                    <input id="Projector" type="checkbox" onclick="Projector()">
-                                    <span class="slider round"></span>
-                                </label>
-                                <div style="position: relative">
-                                    <div id="PowerProjector" style="position: absolute;top:110px;left: 100px  ;color: rgba(255,0,0,0.7);font-size:30px;padding-bottom: 0px;">●</div>
-                                    <img style="height: 200px;" src="images/Video Projector1_500px.png"/>
-                                </div>
-                            </div>
-                            <div style="float: left;">
-                                <label class="switch">
-                                    <input id="Screen" type="checkbox" onclick="Screen()">
-                                    <span class="slider round"></span>
-                                </label>
-                                <div>
-                                    <!--投影幕-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
-
-            </div>
-
-        </section>
-    </section>
-    <!-- FEATURED-PROJECT   : ENDS -->
     <!--Meeting Room Start-->
     <script>
         var Li1 = document.getElementById("Light1");
@@ -465,6 +596,13 @@
         var Iglass= document.getElementById("ImgGlass");
         var projector = document.getElementById("Projector");
         var PowerProjector= document.getElementById("PowerProjector");
+        var DotL1 = document.getElementById("DotL1");
+
+        var screen = document.getElementById("screen");
+        var ScreenShow= document.getElementById("ScreenShow");
+        var i = 13;
+        var j = 0;
+
         function Light1() {
             if (Li1.checked==true){
                 ILi1.src="images/Light On_528px.png";
@@ -488,9 +626,42 @@
         }
         function Projector() {
             if (projector.checked==true){
-                PowerProjector.style=" position: absolute;top:110px;left: 100px  ;color: rgba(0,255,0,0.7);font-size:30px;padding-bottom: 0px;"
+                PowerProjector.style=" position: absolute;top:115px;left: 110px  ;color: rgba(0,255,0,0.7);font-size:30px;padding-bottom: 0px;"
             }else if (projector.checked==false) {
-                PowerProjector.style=" position: absolute;top:110px;left: 100px  ;color: rgba(255,0,0,0.7);font-size:30px;padding-bottom: 0px;"
+                PowerProjector.style=" position: absolute;top:115px;left: 110px  ;color: rgba(255,0,0,0.7);font-size:30px;padding-bottom: 0px;"
+            }
+        }
+
+
+        function sequentialImg(){  //循序播放 Screen down
+            setTimeout(function () {
+                ScreenShow.src = "images/Projector/screen"+i+".png";
+                i--;
+                if(i>0){
+                    sequentialImg();
+                }else{
+                    ScreenShow.src = "images/Projector/screen0.png";
+                    i=13;
+                }
+            }, 100);
+        }
+        function sequentialImg1(){  //循序播放 Screen up
+            setTimeout(function () {
+                ScreenShow.src = "images/Projector/screen"+j+".png";
+                j++;
+                if(j<=13){
+                    sequentialImg1();
+                }else if(j=13){
+                    ScreenShow.src = "images/Projector/screen13.png";
+                    j=0;
+                }
+            }, 100);
+        }
+        function Screen() {
+            if (screen.checked==true){
+                sequentialImg();
+            }else if (screen.checked==false) {
+                sequentialImg1();
             }
         }
     </script>
